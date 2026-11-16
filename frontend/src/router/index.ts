@@ -6,6 +6,7 @@ const Dag = () => import('@/views/dag/index.vue')
 const Dependency = () => import('@/views/dependency/index.vue')
 const Sourcecheck = () => import('@/views/sourcecheck/index.vue')
 const Runtime = () => import('@/views/runtime/index.vue')
+const Backfill = () => import('@/views/backfill/index.vue')
 const Rerun = () => import('@/views/rerun/index.vue')
 const Baseline = () => import('@/views/baseline/index.vue')
 const Partitioncheck = () => import('@/views/partitioncheck/index.vue')
@@ -28,6 +29,7 @@ const router = createRouter({
     { path: '/dependency', name: 'dependency', component: Dependency },
     { path: '/sourcecheck', name: 'sourcecheck', component: Sourcecheck },
     { path: '/runtime', name: 'runtime', component: Runtime },
+    { path: '/backfill', name: 'backfill', component: Backfill },
     { path: '/rerun', name: 'rerun', component: Rerun },
     { path: '/baseline', name: 'baseline', component: Baseline },
     { path: '/partitioncheck', name: 'partitioncheck', component: Partitioncheck },

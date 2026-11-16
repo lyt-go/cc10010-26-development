@@ -28,6 +28,12 @@ class EntryPayload(BaseModel):
     remark: str | None = None
 
 
+class SettlePayload(BaseModel):
+    """多选回填记录一次提交，形成结算批次统一批量处理。"""
+
+    ids: list[int] = Field(default_factory=list)
+
+
 
 class EtljobEntry(BaseModel):
     """作业定义明细结构。"""
@@ -100,6 +106,18 @@ class RerunEntry(BaseModel):
     field_5: str | None = None  # 覆盖策略
     field_6: str | None = None  # 依赖级联
     field_7: str | None = None  # 重跑状态
+
+class BackfillEntry(BaseModel):
+    """回填记录明细结构。"""
+
+    field_0: str | None = None  # 回填编号
+    field_1: str | None = None  # 作业名称
+    field_2: str | None = None  # 目标数据表
+    field_3: str | None = None  # 业务面
+    field_4: str | None = None  # 分区积压量
+    field_5: str | None = None  # 积压更新时间
+    field_6: str | None = None  # 匹配资源池
+    field_7: str | None = None  # 结算批次号
 
 class BaselineEntry(BaseModel):
     """基线定义明细结构。"""

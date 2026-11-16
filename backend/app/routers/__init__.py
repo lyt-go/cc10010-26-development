@@ -11,6 +11,7 @@ from app.routers import dag as router_dag
 from app.routers import dependency as router_dependency
 from app.routers import sourcecheck as router_sourcecheck
 from app.routers import runtime as router_runtime
+from app.routers import backfill as router_backfill
 from app.routers import rerun as router_rerun
 from app.routers import baseline as router_baseline
 from app.routers import partitioncheck as router_partitioncheck
@@ -24,4 +25,4 @@ from app.routers import logarchive as router_logarchive
 from app.routers import notifychan as router_notifychan
 from app.routers import publishplan as router_publishplan
 
-ROUTERS = [router_etljob, router_dag, router_dependency, router_sourcecheck, router_runtime, router_rerun, router_baseline, router_partitioncheck, router_comparator, router_metastore, router_resource, router_slavalidate, router_sqltpl, router_backuprestore, router_logarchive, router_notifychan, router_publishplan]
+ROUTERS = [router_etljob, router_dag, router_dependency, router_sourcecheck, router_runtime, router_backfill, router_rerun, router_baseline, router_partitioncheck, router_comparator, router_metastore, router_resource, router_slavalidate, router_sqltpl, router_backuprestore, router_logarchive, router_notifychan, router_publishplan]

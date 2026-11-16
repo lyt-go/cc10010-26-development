@@ -70,7 +70,7 @@ import { request } from '@/api/client'
 type Row = Record<string, string | number | null>
 
 const ENDPOINT = '/api/runtime'
-const columns = ["记录编号", "作业名称", "开始时间", "结束时间", "执行状态", "读取行数", "写入行数", "错误信息"]
+const columns = ["记录编号", "作业名称", "开始时间", "结束时间", "执行状态", "读取行数", "写入行数", "错误信息", "回填编号", "匹配资源池", "占用并发数", "分区积压量", "结算批次号"]
 const actions = ["启动作业", "终止作业", "标记成功"]
 const statuses = ["草稿", "运行中", "成功", "失败", "已终止"]
 const stats = [{"label": "运行记录总数", "value": 0}, {"label": "今日运行数", "value": 0}, {"label": "失败记录数", "value": 0}]
